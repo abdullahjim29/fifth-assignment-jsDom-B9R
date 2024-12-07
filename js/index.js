@@ -1,12 +1,13 @@
 // ! donation tab functionality
 
-// palestine
+// palestine donation
 document.getElementById('palestine-donation-btn')
-.addEventListener('click', function () {
+    .addEventListener('click', function () {
         const inputValue = getInputValueNumberById('palestine-donation-field');
         const currentDonation = getElementText('palestine-donation-amount');
         const updateAmount = inputValue + currentDonation;
         const emptyInput = ElementGet('palestine-donation-field').value = "";
+
         // validation
         if (isNaN(inputValue) || inputValue < 0) {
             return alert('please provide a positive number');
@@ -28,8 +29,8 @@ document.getElementById('palestine-donation-btn')
         const createDiv = document.createElement('div');
         createDiv.className = "border-2 border-gray-100 p-6 rounded-lg";
         createDiv.innerHTML = `
-        <h2 class="text-base md:text-xl font-semibold">${inputValue} Taka ${getDonationTitle}</h2>
-        <span class="text-sm md:text-base">${new Date().toString()}</span>
+        <h2 class="text-base md:text-xl font-semibold mb-3">${inputValue} Taka ${getDonationTitle}</h2>
+        <p class="text-sm md:text-base bg-slate-100 p-3 rounded-md">${new Date().toString()}</p>
     `;
         getHistoryContainer.insertBefore(createDiv, getHistoryContainer.firstChild);
 
@@ -38,13 +39,14 @@ document.getElementById('palestine-donation-btn')
     })
 
 
-// feni
+// feni donation
 document.getElementById('feni-donation-btn')
     .addEventListener('click', function () {
         const inputValue = getInputValueNumberById('feni-donation-field');
         const currentDonation = getElementText('feni-donation-amount');
         const updateAmount = inputValue + currentDonation;
         const emptyInput = ElementGet('feni-donation-field').value = "";
+
         // validation
         if (isNaN(inputValue) || inputValue < 0) {
             return alert('please provide a positive number');
@@ -76,7 +78,7 @@ document.getElementById('feni-donation-btn')
     })
 
 
-// qouta
+// qouta donation
 document.getElementById('qouta-donation-btn')
     .addEventListener('click', function () {
         const inputValue = getInputValueNumberById('qouta-donation-field');
@@ -116,7 +118,7 @@ document.getElementById('qouta-donation-btn')
     })
 
 
-// ! toggle dnation and history tab
+// ! toggle dnation and history tabs with functionality
 
 // history tab
 const historyTab = document.getElementById('history-tab-btn');

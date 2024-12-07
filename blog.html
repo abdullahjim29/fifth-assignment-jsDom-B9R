@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-     <!-- tailwind and daisyUi cdn -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-     <script src="https://cdn.tailwindcss.com"></script>
- 
-     <!-- tailwind config -->
-     <script>
-         tailwind.config = {
-             theme: {
-                 extend: {
-                     colors: {
-                         clifford: '#da373d',
-                         primary: '#4381ff',
-                     },
-                     fontFamily: {
-                         stylish: "Stylish",
-                     },
-                 },
-             }
-         }
-     </script>
+    <title>Donate Today</title>
+    <!-- tailwind and daisyUi cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primary: '#4381ff',
+                    },
+                    fontFamily: {
+                        stylish: "Stylish",
+                    },
+                },
+            }
+        }
+    </script>
 </head>
+
 <body>
     <header class="bg-[#f9f7f3] py-8">
         <!-- navbar start -->
         <nav class="w-11/12 md:w-9/12 mx-auto flex justify-between items-center">
 
             <!-- blog button -->
-                <div id="home-btn">
-                    <div class="btn bg-primary text-white px-7 text-xl">Home</div>
-                </div>
+            <div id="home-btn">
+                <div class="btn bg-primary text-white px-7 text-xl">Home</div>
+            </div>
 
             <!-- logo -->
             <div class="flex flex-col md:flex-row gap-3 items-center">
@@ -58,47 +60,56 @@
             <div class="join join-vertical w-full">
                 <h1 class="text-4xl font-bold mb-6">Important FAQ !</h1>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
-                  <input type="radio" name="my-accordion-4" checked="checked" />
-                  <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM) ?</div>
-                  <div class="collapse-content">
-                    <p>The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects</p>
-                  </div>
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM) ?</div>
+                    <div class="collapse-content">
+                        <p>The DOM (Document Object Model) is a programming interface for web documents. It represents
+                            the structure of a webpage as a tree of objects</p>
+                    </div>
                 </div>
 
                 <div class="collapse collapse-arrow join-item border-base-300 border">
-                  <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
-                  <div class="collapse-content">
-                    <p>The DOM provides some methods to retrieve elements. For a single element, we can use getElementById and querySelector. For multiple elements, we can use getElementsByClassName, getElementsByTagName, and querySelectorAll.</p>
-                  </div>
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>The DOM provides some methods to retrieve elements. For a single element, we can use
+                            getElementById and querySelector. For multiple elements, we can use getElementsByClassName,
+                            getElementsByTagName, and querySelectorAll.</p>
+                    </div>
                 </div>
 
                 <div class="collapse collapse-arrow join-item border-base-300 border">
-                  <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">What is Event Delegation in the context of the DOM, and why is is useful?</div>
-                  <div class="collapse-content">
-                    <p>Event delegation in the DOM is a technique that attaches a single event listener to a parent element to handle events for all of its descendants.</p>
-                  </div>
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">What is Event Delegation in the context of the DOM,
+                        and why is is useful?</div>
+                    <div class="collapse-content">
+                        <p>Event delegation in the DOM is a technique that attaches a single event listener to a parent
+                            element to handle events for all of its descendants.</p>
+                    </div>
                 </div>
 
                 <div class="collapse collapse-arrow join-item border-base-300 border">
-                  <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
-                  <div class="collapse-content">
-                    <p>The classList object only provide methods to change the class of an element. If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set.</p>
-                  </div>
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
+                        styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p>The classList object only provide methods to change the class of an element. If you want to
+                            change other attributes like id , href , or src , you can use the setAttribute() method. The
+                            setAttribute() method accepts two arguments: The name of the attribute to set.</p>
+                    </div>
                 </div>
 
-              </div>
+            </div>
 
         </div>
     </main>
 
     <!-- Go to home page -->
-   <script>
-    document.getElementById('home-btn').addEventListener('click', function(){
-        window.location.href = './index.html';
-    })
-   </script>
+    <script>
+        document.getElementById('home-btn').addEventListener('click', function () {
+            window.location.href = './index.html';
+        })
+    </script>
 </body>
+
 </html>
