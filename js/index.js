@@ -1,17 +1,17 @@
 // ! donation tab functionality
 
-// noakhali
-document.getElementById('noakhali-donation-btn')
+// palestine
+document.getElementById('palestine-donation-btn')
 .addEventListener('click', function () {
-        const inputValue = getInputValueNumberById('noakhali-donation-field');
-        const currentDonation = getElementText('noakhali-donation-amount');
+        const inputValue = getInputValueNumberById('palestine-donation-field');
+        const currentDonation = getElementText('palestine-donation-amount');
         const updateAmount = inputValue + currentDonation;
-        const emptyInput = ElementGet('noakhali-donation-field').value = "";
+        const emptyInput = ElementGet('palestine-donation-field').value = "";
         // validation
         if (isNaN(inputValue) || inputValue < 0) {
             return alert('please provide a positive number');
         }
-        const pushAmount = setElementText('noakhali-donation-amount', updateAmount);
+        const pushAmount = setElementText('palestine-donation-amount', updateAmount);
 
         // modal
         document.getElementById('my_modal_1').classList.remove('hidden');
@@ -23,7 +23,7 @@ document.getElementById('noakhali-donation-btn')
         const pushUpdateTotalDonationAmount = setElementText('total-balance', updateTotalDonationAmount);
 
         // add donation to history
-        const getDonationTitle = ElementGet('noakhali-donation-title').innerText;
+        const getDonationTitle = ElementGet('palestine-donation-title').innerText;
         const getHistoryContainer = ElementGet('history-container');
         const createDiv = document.createElement('div');
         createDiv.className = "border-2 border-gray-100 p-6 rounded-lg";
