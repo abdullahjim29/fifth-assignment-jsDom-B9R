@@ -2,7 +2,7 @@
 
 // noakhali
 document.getElementById('noakhali-donation-btn')
-    .addEventListener('click', function () {
+.addEventListener('click', function () {
         const inputValue = getInputValueNumberById('noakhali-donation-field');
         const currentDonation = getElementText('noakhali-donation-amount');
         const updateAmount = inputValue + currentDonation;
@@ -28,10 +28,13 @@ document.getElementById('noakhali-donation-btn')
         const createDiv = document.createElement('div');
         createDiv.className = "border-2 border-gray-100 p-6 rounded-lg";
         createDiv.innerHTML = `
-        <h2 class="text-xl md:text-2xl font-semibold">${inputValue} Taka ${getDonationTitle}</h2>
-        <span class="text-base">${new Date().toString()}</span>
+        <h2 class="text-base md:text-xl font-semibold">${inputValue} Taka ${getDonationTitle}</h2>
+        <span class="text-sm md:text-base">${new Date().toString()}</span>
     `;
         getHistoryContainer.insertBefore(createDiv, getHistoryContainer.firstChild);
+
+        // no found remove
+        const noFound = addClass('no-found', 'hidden');
     })
 
 
@@ -67,6 +70,9 @@ document.getElementById('feni-donation-btn')
         <span class="text-base">${new Date().toString()}</span>
     `;
         getHistoryContainer.insertBefore(createDiv, getHistoryContainer.firstChild);
+
+        // no found remove
+        const noFound = addClass('no-found', 'hidden');
     })
 
 
@@ -104,6 +110,9 @@ document.getElementById('qouta-donation-btn')
         <span class="text-base">${new Date().toString()}</span>
     `;
         getHistoryContainer.insertBefore(createDiv, getHistoryContainer.firstChild);
+
+        // no found remove
+        const noFound = addClass('no-found', 'hidden');
     })
 
 

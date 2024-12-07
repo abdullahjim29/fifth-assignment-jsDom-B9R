@@ -9,11 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
-
     <!-- tailwind config -->
     <script>
         tailwind.config = {
@@ -23,9 +18,7 @@
                         clifford: '#da373d',
                         primary: '#4381ff',
                     },
-                    fontFamily: {
-                        stylish: "Stylish",
-                    },
+
                 },
             }
         }
@@ -38,20 +31,22 @@
         <nav class="w-11/12 md:w-9/12 mx-auto flex justify-between items-center">
 
             <!-- blog button -->
-            <div id="blog-btn">
-                <div class="btn bg-primary text-white px-7 text-xl">Blog</div>
-            </div>
+            
+                <div id="blog-btn">
+                    <div class="btn bg-primary text-white px-7 text-xl">Blog</div>
+                </div>
+            
 
             <!-- logo -->
             <div class="flex flex-col md:flex-row gap-3 items-center">
-                <img class="hidden md:block" src="./assets/logo.png" alt="">
-                <h2 class="text-base md:text-2xl font-bold">Donate Bangladesh</h2>
+                <img class="" src="./assets/logo.png" alt="">
+                <h2 class="text-2xl font-bold hidden md:block">Donate Bangladesh</h2>
             </div>
 
             <!-- total balance -->
             <div class="flex flex-col md:flex-row gap-3 items-center">
                 <img class="hidden md:block" src="./assets/coin.png" alt="">
-                <p class="text-base md:text-2xl font-bold">
+                <p class="text-xl md:text-2xl font-bold">
                     <span id="total-balance">5500</span>
                     <span>BDT</span>
                 </p>
@@ -92,7 +87,7 @@
                                 <span>BDT</span>
                             </p>
                         </button>
-                        <h2 id="noakhali-donation-title" class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <h2 id="noakhali-donation-title" class="text-xl md:text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
                         <p class="md:w-10/12">
                             The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
                             donation will help provide essential supplies and to those affected by this disaster. Every
@@ -118,9 +113,9 @@
                                 <span>BDT</span>
                             </p>
                         </button>
-                        <h2 id="feni-donation-title" class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                        <h2 id="feni-donation-title" class="text-xl md:text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
                         <p class="md:w-10/12">
-                            The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            The recent floods in Feni have caused significant damage to homes infrastructure. Your
                             donation will help provide essential supplies and to those affected by this disaster. Every
                             contribution, big or small, makes difference. Please join us in supporting the relief
                             efforts and making a positive impact on the lives of those in need.
@@ -144,9 +139,9 @@
                                 <span>BDT</span>
                             </p>
                         </button>
-                        <h2 id="qouta-donation-title" class="text-2xl font-bold">Aid for Injured in the Quota Movement</h2>
+                        <h2 id="qouta-donation-title" class="text-xl md:text-2xl font-bold">Aid for Injured in the Quota Movement</h2>
                         <p class="md:w-10/12">
-                            The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            The recent floods in Qouta have caused significant damage to homes infrastructure. Your
                             donation will help provide essential supplies and to those affected by this disaster. Every
                             contribution, big or small, makes difference. Please join us in supporting the relief
                             efforts and making a positive impact on the lives of those in need.
@@ -183,7 +178,7 @@
 
         <!-- history section start -->
         <div id="history-container" class="hidden w-9/12 mx-auto my-10 space-y-4">
-            
+            <h1 id="no-found" class="text-4xl font-semibold text-center">NO FOUND DONATION HISTORY</h1>
         </div>
         <!-- history section end -->
     </main>
@@ -195,6 +190,12 @@
     <!-- script -->
     <script src="./js/index.js"></script>
     <script src="./js/utility.js"></script>
+
+    <script>
+        document.getElementById('blog-btn').addEventListener('click', function(){
+            window.location.href = './blog.html'
+        });
+    </script>
 </body>
 
 </html>
