@@ -1,4 +1,4 @@
-// donation tab functionality
+// ! donation tab functionality
 
 // noakhali
 document.getElementById('noakhali-donation-btn')
@@ -71,3 +71,45 @@ document.getElementById('qouta-donation-btn')
     const updateTotalDonationAmount = currentTotalDonationAmount - inputValue;
     const pushUpdateTotalDonationAmount = setElementText('total-balance', updateTotalDonationAmount);
 })
+
+
+// ! toggle dnation and history tab
+
+// history tab
+document.getElementById('history-tab-btn')
+.addEventListener('click', function(e){
+
+    // add classess
+    e.target.className = "btn bg-primary text-xl text-white";
+    const donationTab = document.getElementById('donation-tab-btn');
+
+    // remove classes
+    donationTab.classList.remove("btn");
+    donationTab.classList.remove("bg-primary");
+    donationTab.classList.remove("text-xl");
+    donationTab.classList.remove("text-white");
+
+    // add classes
+    donationTab.className = "text-xl border-2 border-gray-100 py-2 px-5 rounded-lg";
+
+});
+
+
+// donation tab
+document.getElementById('donation-tab-btn')
+.addEventListener('click', function(e){
+
+    // add classess
+    e.target.className = "btn bg-primary text-xl text-white";
+    const historyTab = document.getElementById('history-tab-btn');
+
+    // remove classes
+    historyTab.classList.remove("btn");
+    historyTab.classList.remove("bg-primary");
+    historyTab.classList.remove("text-xl");
+    historyTab.classList.remove("text-white");
+
+    // add classes
+    historyTab.className = "text-xl border-2 border-gray-100 py-2 px-5 rounded-lg";
+
+});

@@ -12,3 +12,8 @@ function getElementText(id){
 function setElementText(id, text) {
     return document.getElementById(id).innerText = text;
 }
+
+// getElement
+function ElementGet (id){
+    return document.getElementById(id);
+}
